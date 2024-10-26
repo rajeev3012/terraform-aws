@@ -251,26 +251,29 @@ terraform apply
     git commit -m "initial commit"
 ```
 
+ 
+#### h. Create an empty GitHub remote repo.
+
     
-#### h. Add GitHub remote repo:
+#### i. Add remote repo:
 
 ```bash
     git remote add origin https://github.com/rajeev3012/terraform-aws.git
 ```
 
-#### i. Update GIT remote URL; enter username and PAT on git push:
+#### j. Update GIT remote URL; enter username and PAT on git push:
 
 ```bash
     git remote set-url origin https://github.com/rajeev3012/terraform-aws.git
 ```
 
-#### j. Fetch and merge latest change to local first:
+#### k. Fetch and merge latest change to local first:
 
 ```bash
     git pull origin main --rebase
 ```
 
-#### k. Finally push changes to remote repo:
+#### l. Finally push the code to remote repo:
 
 ```bash
     git push -u origin main
