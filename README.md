@@ -2,6 +2,14 @@
 
 Use Terraform to deploy EC2 instance on AWS. Below are the steps involved:
 
+
+1. Install pipx (a tool to run Python packages), then install awscli:
+
+        apt install pipx
+
+        pipx install awscli
+
+
 	1. Install pipx( a tool to run Python packages), then install awscli:
 		# apt install pipx
 		# pipx install awscli
