@@ -4,31 +4,29 @@
 #### Using Terraform to deploy EC2 instance on AWS cloud.
 
 
+## 1. Setup and configure AWS CLI
 
-
-## 1. Install pipx (a tool to run Python packages), then install awscli:
+#### a. Install pipx (a tool to run python packages): 
 ```bash
     apt install pipx
 ```
+
+#### b. Install AWS CLI via pipx:
 ```bash
     pipx install awscli
 ```
 
-
-## 2. Add path to env. variable:
+#### c. Add path to env. variable and restart the terminal to take affect:
 ```bash
     pipx ensurepath
-```
+```	
 
-#### restart the terminal..!!
-		
-
-## 3. Check if aws is installed:	
+#### d. Check if aws is installed:	
 ```bash
     aws --version
 ```
 
-## 4. Connect awscli to amazon account:
+#### e. Connect awscli to amazon account:
 ```bash
     aws configure
 ```
@@ -37,7 +35,7 @@
             c. Region: us-east-1
             d. Format: json
 
-## 5. Install terraform:
+## 2. Install terraform:
 
 #### a. Install GNU Privacy Guard(GPG) to check Hashicorp s/w is genuine:
 
@@ -63,26 +61,26 @@
     sudo apt install terraform
 ```
 
-## 6. Create terraform files to deploy the infrastructure:
+## 3. Create terraform files to deploy the infrastructure:
 
 #### main.tf
 	
-        # Define the AWS provider
-        provider "aws" {
-            region = var.aws_region
+    # Define the AWS provider
+    provider "aws" {
+        region = var.aws_region
+    }
+    
+    
+    # Define an EC2 instance
+    resource "aws_instance" "example" {
+        ami           = var.ami_id
+        instance_type = var.instance_type
+    
+        # Add a simple tag
+        tags = {
+        Name = "Demo-EC2-Instance"
         }
-        
-        
-        # Define an EC2 instance
-        resource "aws_instance" "example" {
-            ami           = var.ami_id
-            instance_type = var.instance_type
-        
-            # Add a simple tag
-            tags = {
-            Name = "Demo-EC2-Instance"
-            }
-        }
+    }
 	
 	
 #### variables.tf
@@ -106,7 +104,7 @@
 	}	
 	
 
-## 7. Run Terraform commands:
+## 4. Run Terraform commands:
 	
 #### a. Initialize terraform repository ("terraform.tfstate" file is created @root):
     
@@ -145,7 +143,7 @@
 ```
 		
 			
-## 8. Setup Git and push code to GitHub repo:
+## 5. Setup Git and push code to GitHub repo:
 
 #### a. Install git:
 
@@ -213,10 +211,11 @@
     git push -u origin main
 ```
 
----	
-			
+---
+---
 
 ## Author
 
 [@RajeevRanjan](https://github.com/rajeev3012/)
+
 
