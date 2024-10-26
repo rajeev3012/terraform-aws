@@ -1,12 +1,12 @@
 
 # Terraform AWS 
 
-## Using Terraform to deploy EC2 instance on AWS cloud.
+#### Using Terraform to deploy EC2 instance on AWS cloud.
 
 
 
 
-### 1. Install pipx (a tool to run Python packages), then install awscli:
+## 1. Install pipx (a tool to run Python packages), then install awscli:
 ```bash
     apt install pipx
 ```
@@ -15,7 +15,7 @@
 ```
 
 
-### 2. Add path to env. variable:
+## 2. Add path to env. variable:
 ```bash
     pipx ensurepath
 ```
@@ -23,12 +23,12 @@
 #### restart the terminal..!!
 		
 
-### 3. Check if aws is installed:	
+## 3. Check if aws is installed:	
 ```bash
     aws --version
 ```
 
-### 4. Connect awscli to amazon account:
+## 4. Connect awscli to amazon account:
 ```bash
     aws configure
 ```
@@ -37,7 +37,7 @@
             c. Region: us-east-1
             d. Format: json
 
-### 5. Install terraform:
+## 5. Install terraform:
 
 #### a. Install GNU Privacy Guard(GPG) to check Hashicorp s/w is genuine:
 
@@ -63,7 +63,7 @@
     sudo apt install terraform
 ```
 
-### 6. Create terraform files to deploy the infrastructure:
+## 6. Create terraform files to deploy the infrastructure:
 
 #### main.tf
 	
@@ -106,7 +106,7 @@
 	}	
 	
 
-### 7. Run Terraform commands:
+## 7. Run Terraform commands:
 	
 #### a. Initialize terraform repository ("terraform.tfstate" file is created @root):
     
@@ -145,7 +145,7 @@
 ```
 		
 			
-### 8. Setup Git and push code to GitHub repo:
+## 8. Setup Git and push code to GitHub repo:
 
 #### a. Install git:
 
@@ -213,11 +213,7 @@
     git push -u origin main
 ```
 
----
----
----
----
----		
+---	
 			
 
 ## Author
