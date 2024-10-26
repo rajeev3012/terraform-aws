@@ -1,8 +1,73 @@
+# AWS EC2 deployment with Terraform:
 
-# Terraform AWS 
+This project automates the deployment of an EC2 instance on AWS using Terraform as an Infrastructure as Code (IaC) tool.
 
-#### Using Terraform to deploy EC2 instance on AWS cloud.
+---
 
+### 1. Key Features
+- Uses **Terraform** to define and deploy infrastructure on AWS.
+- Configures **AWS CLI** for secure authentication.
+- Manages customizable variables to easily modify deployment specifics.
+
+
+
+### 2. Setup
+
+- **AWS CLI Configuration**: Connects to AWS for authentication and resource management.
+- **Terraform Installation**:
+    - Installed Terraform via the HashiCorp repository.
+    - Verified installation and environment setup.
+
+
+
+### 3. Configuration
+
+- **`main.tf`**:
+  - Defines the AWS provider.
+  - Provisions an EC2 instance with a specified **AMI ID** and **instance type**.
+  - Includes resource tagging for easy identification.
+
+- **`variables.tf`**:
+  - Manages variables such as `aws_region`, `ami_id`, and `instance_type` to enable customization and flexibility.
+
+
+### 4. Terraform Workflow
+  - `initialize`: Establishes the Terraform workspace.  
+  - `validate`: Verifies the configuration for syntax and errors.  
+  - `format`: Reformats code to ensure consistent indentation.  
+  - `apply`: Executes the configuration on AWS, initiating the EC2 instance.
+
+### 5. Version Control
+
+- Configured **Git** for version tracking, maintaining a clear project history.
+- Created a `.gitignore` file to exclude unnecessary files from the repository.
+- Pushed all configuration files to **GitHub** for centralized tracking and collaboration.
+
+
+---
+
+### Quick Start
+
+To clone this repository and start using the configuration:
+
+```bash
+# Clone the repository
+git clone https://github.com/rajeev3012/terraform-aws.git
+
+# Navigate into the project directory
+cd terraform-aws
+
+# Initialize Terraform
+terraform init
+
+# Apply the configuration
+terraform apply
+```
+
+---
+
+
+# Detailed step-by-step instructions:
 
 ## 1. Setup and configure AWS CLI
 
